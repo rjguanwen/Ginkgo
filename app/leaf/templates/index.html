@@ -1,0 +1,31 @@
+{% extends "base_leaf.html" %}
+{% block content %}
+    <!--
+    <h1>Hello, {{g.user.nickname}}!</h1>
+    -->
+    <h1>{{ _('欢迎, %(nickname)s !', nickname=g.user.nickname) }}</h1>
+    <form action="" method="post" name="post">
+        {{form.hidden_tag()}}
+        <table>
+            <tr>
+                <td>说说：</td>
+                <td>{{ form.post(size=30, maxlength=140) }}</td>
+                <td>
+                    {% for error in form.errors.post %}
+                    <span style="color:red;">[{{error}}]</span><br>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="发布"></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+    {% for post in posts.items%}
+        {% include 'post.html' %}
+    {% endfor %}
+    {% if posts.has_prev %}<a href="{{ url_for('leaf.index', page=posts.prev_num) }}"><< {{ _('上一页') }}</a>{% else %}<< {{ _('上一页') }}{% endif %} |
+    {% if posts.has_next %}<a href="{{ url_for('leaf.index', page=posts.next_num) }}">{{ _('下一页') }} >></a>{% else %}{{ _('下一页') }} >>{% endif %}
+{% endblock %}

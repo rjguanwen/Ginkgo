@@ -1,0 +1,29 @@
+{% extends 'base_leaf.html' %}
+
+{% block content %}
+<table>
+    <tr valign="top">
+        <td><img src="{{user.avatar(128)}}"></td>
+        <td>
+            <h1>用户: {{user.nickname}}</h1>
+            {% if user.about_me %}<p>{{user.about_me}}</p>{% endif %}
+            {% if user.last_seen %}<p><em>Last seen on: {{momentjs(user.last_seen).calendar()}}</em></p>{% endif %}
+            <p>{{user.followers.count()}} {{ _('关注者') }} |
+            {%if user.user_name == g.user.user_name %}
+                <a href="{{url_for('main.user_edit')}}">{{ _('编辑') }}</a>
+            {% elif not g.user.is_following(user) %}
+                <a href="{{url_for('main.follow', nickname=user.nickname)}}">{{ _('关注') }}</a>
+            {% else %}
+                <a href="{{url_for('main.unfollow', nickname=user.nickname)}}">{{ _('取消关注') }}</a>
+            {% endif %}
+            </p>
+        </td>
+    </tr>
+</table>
+<hr>
+    {% for post in posts.items %}
+        {% include 'post.html' %}
+    {% endfor %}
+    {% if posts.has_prev %}<a href="{{ url_for('leaf.index', page=posts.prev_num) }}"><< {{ _('上一页') }}</a>{% else %}<< {{ _('上一页') }}{% endif %} |
+    {% if posts.has_next %}<a href="{{ url_for('leaf.index', page=posts.next_num) }}">{{ _('下一页') }} >></a>{% else %}{{ _('下一页') }} >>{% endif %}
+{% endblock %}

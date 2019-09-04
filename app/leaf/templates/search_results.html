@@ -1,0 +1,8 @@
+{% extends "base_leaf.html" %}
+
+{% block content %}
+<h1>“{{ query }}”的查询结果：</h1>
+{% for post in results %}
+    {% include 'post.html' %}
+{% endfor %}
+{% endblock %}

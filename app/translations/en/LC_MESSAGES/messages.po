@@ -1,0 +1,182 @@
+# English translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-07-28 14:30+0800\n"
+"PO-Revision-Date: 2018-06-27 10:25+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: app/__init__.py:27
+msgid "请登录后访问本页."
+msgstr ""
+
+#: app/leaf/views.py:45
+msgid "文章已发布！"
+msgstr "Post has published!"
+
+#: app/leaf/templates/base_leaf.html:38 app/leaf/views.py:49
+#: app/templates/base.html:38
+msgid "首页"
+msgstr "Home"
+
+#: app/leaf/views.py:67 app/main/views.py:77
+msgid "没有该用户，请检查！"
+msgstr "User not found!"
+
+#: app/leaf/views.py:69 app/leaf/views.py:75 app/leaf/views.py:82
+#: app/main/views.py:79 app/main/views.py:85 app/main/views.py:92
+#: app/templates/login.html:3 app/templates/login.html:21
+msgid "登录"
+msgstr "Login"
+
+#: app/leaf/views.py:73 app/main/views.py:83
+msgid "密码错误，请重新输入！"
+msgstr "password error,please try again!"
+
+#: app/leaf/views.py:101
+#, python-format
+msgid "用户 %(nickname)s 不存在!"
+msgstr "User %(nickname)s not found!"
+
+#: app/leaf/views.py:121
+msgid "用户信息修改成功！"
+msgstr "user info has updated!"
+
+#: app/leaf/views.py:135 app/leaf/views.py:159
+#, python-format
+msgid "用户 %s 不存在！"
+msgstr "User %s not found!"
+
+#: app/leaf/views.py:138
+msgid "您不能关注自己！"
+msgstr "You can not follow yourself!"
+
+#: app/leaf/views.py:143
+#, python-format
+msgid "无法关注 %s !"
+msgstr "Can not follow %s !"
+
+#: app/leaf/views.py:147
+#, python-format
+msgid "您已关注 %s !"
+msgstr "You has followed %s !"
+
+#: app/leaf/views.py:162
+msgid "不能取消关注自己！"
+msgstr "Forbidden!"
+
+#: app/leaf/views.py:167
+#, python-format
+msgid "无法取消关注 %s ！"
+msgstr "You can not unfollowed %s !"
+
+#: app/leaf/views.py:171
+#, python-format
+msgid "您已取消关注 %s !"
+msgstr "You has unfollowed %s !"
+
+#: app/leaf/views.py:197
+msgid "将要删除的文章不存在！"
+msgstr "Post not found!"
+
+#: app/leaf/views.py:200
+msgid "您只能删除自己发表的文章！"
+msgstr "You can not delete this post!"
+
+#: app/leaf/views.py:204
+msgid "文章已删除！"
+msgstr "Post has been deleted!"
+
+#: app/leaf/templates/base_leaf.html:6
+msgid "银杏"
+msgstr "Ginkgo"
+
+#: app/leaf/templates/base_leaf.html:8
+msgid "欢迎来到银杏"
+msgstr "Welcome to Ginkgo"
+
+#: app/leaf/templates/base_leaf.html:30 app/templates/base.html:30
+msgid "错误：翻译服务器无法连接！"
+msgstr "error: Translate server can not connect!"
+
+#: app/leaf/templates/base_leaf.html:40 app/templates/base.html:40
+msgid "个人主页"
+msgstr "User profile"
+
+#: app/leaf/templates/base_leaf.html:43 app/templates/base.html:43
+msgid "搜索"
+msgstr "Search"
+
+#: app/leaf/templates/base_leaf.html:45 app/templates/base.html:45
+msgid "注销"
+msgstr "Logout"
+
+#: app/leaf/templates/index.html:6
+#, python-format
+msgid "欢迎, %(nickname)s !"
+msgstr "Hello, %(nickname)s !"
+
+#: app/leaf/templates/post.html:9
+#, python-format
+msgid "%(nickname)s 说 %(when)s:"
+msgstr "%(nickname)s say %(when)s:"
+
+#: app/leaf/templates/post.html:14
+msgid "翻译"
+msgstr "Translate"
+
+#: app/leaf/templates/post.html:19
+msgid "删除"
+msgstr "Delete"
+
+#: app/leaf/templates/user.html:11
+msgid "关注者"
+msgstr "Follower"
+
+#: app/leaf/templates/user.html:13
+msgid "编辑"
+msgstr "Edit"
+
+#: app/leaf/templates/user.html:15
+msgid "关注"
+msgstr "Follow"
+
+#: app/leaf/templates/user.html:17
+msgid "取消关注"
+msgstr "Unfollow"
+
+#: app/leaf/templates/user.html:27
+msgid "上一页"
+msgstr "Prev page"
+
+#: app/leaf/templates/user.html:28
+msgid "下一页"
+msgstr "Next page"
+
+#: app/templates/login.html:7
+msgid "用户名："
+msgstr "User Id:"
+
+#: app/templates/login.html:14
+msgid "密码："
+msgstr "Password:"
+
+#: app/templates/login.html:20
+msgid "记住密码"
+msgstr "remember"
+
+#~ msgid "请登录后访问本页."
+#~ msgstr "Please log in to access this page."
+
